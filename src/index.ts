@@ -1,5 +1,6 @@
-import { createApp } from "vue";
+import { createApp } from 'vue'
 
-import LButton from "./button";
+// import LButton from './button'
+import SFCButton from './SFCButton.vue'
 
-createApp(LButton).mount("#app");
+createApp(SFCButton).mount('#app')

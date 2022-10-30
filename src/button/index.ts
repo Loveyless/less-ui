@@ -1,11 +1,11 @@
-import { defineComponent, h } from "vue";
+import { defineComponent, h } from 'vue'
 
 export default defineComponent({
-  name: "LButton",
+  name: 'LButton',
 
   // template:'<button>MyButton</button>'
 
   render() {
-    return h("button", null, "MyButton");
+    return h('button', null, 'MyButton')
   },
-});
+})
