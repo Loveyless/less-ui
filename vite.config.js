@@ -1,5 +1,7 @@
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import vueSetupExtend from 'unplugin-vue-setup-extend-plus/vite'
+import unocss from './unocss'
 
 // 库打包模式 https://cn.vitejs.dev/guide/build.html#library-mode
 const rollupOptions = {
@@ -18,6 +20,8 @@ export default {
   plugins: [
     vue(),
     vueJsx(),
+    vueSetupExtend(),
+    unocss(),
   ],
   // 添加库模式配置
   build: {
