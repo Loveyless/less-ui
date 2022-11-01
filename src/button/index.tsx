@@ -1,12 +1,16 @@
 import type { PropType } from 'vue'
 import { defineComponent } from 'vue'
-// import 'uno.css'
+import 'uno.css'
+import type { LColor, LIcon } from './type'
 
-export type LColor = 'white' | 'black' | 'gray' | 'red' | 'yellow' | 'green' | 'blue' | 'indigo' | 'purple' | 'pink'
 export const props = {
   color: {
     type: String as PropType<LColor>,
     default: 'blue', // 设定默认颜色
+  },
+  icon: {
+    type: String as PropType<LIcon>,
+    default: '',
   },
 }
 export default defineComponent({
@@ -17,7 +21,7 @@ export default defineComponent({
     return () => <button
       class={`
       py-2 
-      px-4 
+      px-4
       font-semibold 
       rounded-lg 
       shadow-md 
@@ -29,6 +33,7 @@ export default defineComponent({
       m-1 
       `}
     >
+      {props.icon !== '' ? <i class={`i-ic-baseline-${props.icon} p-3`}></i> : ''}
       {slots.default ? slots.default() : ''}
     </button>
   },

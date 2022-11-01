@@ -15,7 +15,14 @@ createApp({
                 <LButton color='green'>普通按钮</LButton>
                 <LButton color='yellow'>普通按钮</LButton>
                 <LButton color='red'>普通按钮</LButton>
-                <SFCButton>普通按钮</SFCButton>
+                <SFCButtonSetup color='red'>setup按钮</SFCButtonSetup>
+            </div>
+            <div>
+                <LButton icon='search'></LButton>
+                <LButton color='green' icon='check'></LButton>
+                <LButton color='yellow' icon='edit'></LButton>
+                <LButton color='red' icon='delete'></LButton>
+                <SFCButtonSetup color='red' icon='delete'>setup按钮</SFCButtonSetup>
             </div>
         `,
 }).use(LessUi).mount('#app')

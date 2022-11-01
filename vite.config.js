@@ -33,6 +33,8 @@ export default {
       fileName: 'less-ui',
       // 导出模块格式
       formats: ['esm', 'umd', 'iife'],
+      // CSS 代码拆分。当启用时，在异步 chunk 中导入的 CSS 将内联到异步 chunk 本身，并在其被加载时插入。
+      cssCodeSplit: true,
     },
   },
 }
